@@ -1,12 +1,14 @@
 const express = require('express');
 
 const app = express();
+const cors=require("cors");
 const DB = require('./database/connectDB');
 const pinRoute=require("./Routes/pins");
 const userRoute=require("./Routes/users")
 
 app.use(express.json({ extended: false }));
 DB();
+app.use(cors())
 
 app.get("/", (req, res) => {
     res.send("Hello from root api end point!!!");
