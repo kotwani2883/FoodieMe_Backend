@@ -9,7 +9,7 @@ app.use(express.json({ extended: false }));
 DB();
 
 app.get("/", (req, res) => {
-    res.send("Hello from root api end point!!");
+    res.send("Hello from root api end point!!!");
 })
 
 
